@@ -1,5 +1,7 @@
-image: gitpod/workspace-java-11
+image: gitpod/workspace-java-17
 tasks:
+  - init: set mail
+    command: git config --global user.email 14069652+lizzyTheLizard@users.noreply.github.com 
   - init: mvn package
     command: mvn exec:java
 ports:
@@ -8,3 +10,8 @@ ports:
 vscode:
   extensions:
     - vscjava.vscode-java-pack
+    - vscjava.vscode-maven
+    - redhat.java
+    - vscjava.vscode-java-debug
+    - vscjava.vscode-java-dependency
+    - vscjava.vscode-java-test
