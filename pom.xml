@@ -23,8 +23,21 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
 	<modules>
-		<module>username-password-mvc</module>
-		<module>username-password-flux</module>
+		<module>flux-nosec</module>
+		<module>flux-username</module>
+		<module>flux-oidc-client</module>
+		<module>flux-oidc-resource</module>
+		<module>flux-authorization</module>
+		<module>flux-protection</module>
 	</modules>
 </project>
