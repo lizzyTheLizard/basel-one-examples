@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  keycloak:
+    image: jboss/keycloak
+    ports:
+      - 8090:8080
+    volumes:
+      - ./keycloak-config.json:/keycloak-config.json
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_IMPORT: /keycloak-config.json

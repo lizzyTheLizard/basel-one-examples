@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.3</version>
+		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -33,11 +33,11 @@
 	</dependencies>
 
 	<modules>
-		<module>flux-nosec</module>
-		<module>flux-username</module>
-		<module>flux-oidc-client</module>
-		<module>flux-oidc-resource</module>
-		<module>flux-authorization</module>
-		<module>flux-protection</module>
+		<module>flux-0-nosec</module>
+		<module>flux-1-simple</module>
+		<module>flux-2-username</module>
+		<module>flux-3-authorization</module>
+		<module>flux-4-protection</module>
+		<module>flux-5-oidc-client</module>
 	</modules>
 </project>
