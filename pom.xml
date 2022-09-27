@@ -39,5 +39,11 @@
 		<module>flux-3-authorization</module>
 		<module>flux-4-protection</module>
 		<module>flux-5-oidc-client</module>
+		<module>web-0-nosec</module>
+		<module>web-1-simple</module>
+		<module>web-2-username</module>
+		<module>web-3-authorization</module>
+		<module>web-4-protection</module>
+		<module>web-5-oidc-client</module>
 	</modules>
 </project>

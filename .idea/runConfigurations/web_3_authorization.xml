@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="web-3-authorization" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" />
+    <module name="web-3-authorization" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="ch.baselone.springsecurity.example.web.authorization.Application" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="ch.baselone.springsecurity.example.web.authorization.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

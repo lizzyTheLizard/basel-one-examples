@@ -1,30 +1,19 @@
-package ch.baselone.springsecurity.example.flux.oidc.client;
+package ch.baselone.springsecurity.example.web.oidc.client;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
 import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
-import org.springframework.security.config.web.server.ServerHttpSecurity;
-import org.springframework.security.web.server.SecurityWebFilterChain;
-import org.springframework.security.web.server.util.matcher.*;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-@EnableReactiveMethodSecurity
+@EnableMethodSecurity
 public class SecurityConfiguration {
-    //Public Access for certain pages
+    //OIDC-Login
     @Bean
-    @Order(0)
-    public SecurityWebFilterChain debugConfiguration(ServerHttpSecurity http) {
-        http.securityMatcher(new PathPatternParserServerWebExchangeMatcher("/filters"));
-        http.authorizeExchange(c -> c.anyExchange().permitAll());
-        return http.build();
-    }
-
-    //OIDC-Login for the rest
-    @Bean
-    public SecurityWebFilterChain usernameSecurityConfiguration(ServerHttpSecurity http) {
-        http.securityMatcher(new PathPatternParserServerWebExchangeMatcher("/**"));
+    public SecurityFilterChain usernameSecurityConfiguration(HttpSecurity http) throws Exception {
+        http.antMatcher("/**");
         /*
         Configures the oauth2 login as a client. This adds two filter to the chain:
         * The OAuth2AuthorizationRequestRedirectWebFilter starts recognize a request to
@@ -47,7 +36,7 @@ public class SecurityConfiguration {
         /oauth2/authorization/{clientID} so that it triggers the OAuth2AuthorizationRequestRedirectWebFilter
         */
         http.oauth2Login(Customizer.withDefaults());
-        http.authorizeExchange(c -> c.anyExchange().authenticated());
+        http.authorizeRequests(c -> c.anyRequest().authenticated());
         return http.build();
     }
 }
