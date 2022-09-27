@@ -1,4 +1,4 @@
-package ch.baselone.springsecurity.example.flux.nosec;
+package ch.baselone.springsecurity.example.web.nosec;
 
 
 import org.junit.jupiter.api.Test;
