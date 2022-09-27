@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="web-5-oidc-client" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" />
+    <module name="web-5-oidc-client" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="ch.baselone.springsecurity.example.web.oidc.client.Application" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
