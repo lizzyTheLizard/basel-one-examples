@@ -7,6 +7,7 @@ import org.springframework.security.core.context.ReactiveSecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
+
 import java.util.Random;
 
 @RestController
@@ -42,11 +43,11 @@ public class Controller {
     @PostFilter("filterObject > 3")
     public Mono<Integer[]> postFilter() {
         return Mono.just(new Integer[]{
-                random.nextInt(10),
-                random.nextInt(10),
-                random.nextInt(10),
-                random.nextInt(10)
-            }
+                        random.nextInt(10),
+                        random.nextInt(10),
+                        random.nextInt(10),
+                        random.nextInt(10)
+                }
         );
     }
 

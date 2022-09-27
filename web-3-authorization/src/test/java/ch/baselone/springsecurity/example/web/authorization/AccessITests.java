@@ -28,6 +28,7 @@ class AccessITests {
     @Test
     void contextLoads() {
     }
+
     @Test
     void notAuthenticated() throws Exception {
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders

@@ -32,7 +32,7 @@ class AccessITests {
     }
 
     @Test
-    void corsNotAllowed() throws Exception{
+    void corsNotAllowed() throws Exception {
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders
                 .options("https://url.com/csrf/none")
                 .header("Origin", "https://test.com")
@@ -63,7 +63,7 @@ class AccessITests {
     }
 
     @Test
-    void csrf()  throws Exception{
+    void csrf() throws Exception {
         MockHttpServletRequestBuilder request1 = MockMvcRequestBuilders
                 .get("/csrf/token");
         MvcResult result = mvc.perform(request1)
@@ -75,7 +75,7 @@ class AccessITests {
         MockHttpServletRequestBuilder request2 = MockMvcRequestBuilders
                 .post("/csrf")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                .content("name=Name&_csrf="+token)
+                .content("name=Name&_csrf=" + token)
                 .session(Objects.requireNonNull(session));
         mvc.perform(request2)
                 .andExpect(MockMvcResultMatchers.status().isOk())

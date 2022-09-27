@@ -45,7 +45,7 @@ class AccessITests {
                 .header("Access-Control-Request-Method", "GET")
                 .exchange()
                 .expectStatus().is2xxSuccessful()
-                .expectHeader().valueEquals("Access-Control-Allow-Origin","https://example.com");
+                .expectHeader().valueEquals("Access-Control-Allow-Origin", "https://example.com");
     }
 
     @Test
@@ -54,7 +54,7 @@ class AccessITests {
                 .options().uri("/csrf/none")
                 .exchange()
                 .expectStatus().is2xxSuccessful()
-                .expectHeader().valueEquals("X-Frame-Options","DENY");
+                .expectHeader().valueEquals("X-Frame-Options", "DENY");
     }
 
     @Test

@@ -38,7 +38,7 @@ public class SecurityConfiguration {
         and when to use it (requireCsrfProtectionMatcher, usually POST, PUT, DELETE)
         or disable it (disable)
          */
-		http.csrf(Customizer.withDefaults());
+        http.csrf(Customizer.withDefaults());
 
         /*
         Add security headers like X-frame-options or strict-transport-security. All of them
@@ -58,7 +58,7 @@ public class SecurityConfiguration {
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of("https://example.com"));
-        configuration.setAllowedMethods(List.of("GET","POST"));
+        configuration.setAllowedMethods(List.of("GET", "POST"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;

@@ -13,6 +13,7 @@ class AccessITests {
     AccessITests(ApplicationContext applicationContext) {
         webTestClient = WebTestClient.bindToApplicationContext(applicationContext).build();
     }
+
     @Test
     void contextLoads() {
     }

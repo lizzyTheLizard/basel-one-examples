@@ -20,7 +20,7 @@ public class SecurityConfiguration {
     @Order(0)
     public SecurityFilterChain debugConfiguration(HttpSecurity http) throws Exception {
         http.antMatcher("/filters");
-        http.authorizeHttpRequests(c->c.anyRequest().permitAll());
+        http.authorizeHttpRequests(c -> c.anyRequest().permitAll());
         return http.build();
     }
 
@@ -29,7 +29,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain usernameSecurityConfiguration(HttpSecurity http) throws Exception {
         http.antMatcher("/**");
         http.formLogin(Customizer.withDefaults());
-        http.authorizeHttpRequests(c->c.anyRequest().authenticated());
+        http.authorizeHttpRequests(c -> c.anyRequest().authenticated());
         return http.build();
     }
 
