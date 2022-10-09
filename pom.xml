@@ -10,8 +10,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>ch.baselone</groupId>
-    <artifactId>baselone-spring-security-examples</artifactId>
+    <groupId>ch.baselone.springsecurity</groupId>
+    <artifactId>examples</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
@@ -33,17 +33,7 @@
     </dependencies>
 
     <modules>
-        <module>flux-0-nosec</module>
-        <module>flux-1-simple</module>
-        <module>flux-2-username</module>
-        <module>flux-3-authorization</module>
-        <module>flux-4-protection</module>
-        <module>flux-5-oidc-client</module>
-        <module>web-0-nosec</module>
-        <module>web-1-simple</module>
-        <module>web-2-username</module>
-        <module>web-3-authorization</module>
-        <module>web-4-protection</module>
-        <module>web-5-oidc-client</module>
+        <module>flux</module>
+        <module>web</module>
     </modules>
 </project>
