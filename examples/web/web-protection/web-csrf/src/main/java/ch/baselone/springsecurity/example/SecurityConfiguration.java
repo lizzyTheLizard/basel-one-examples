@@ -17,9 +17,10 @@ public class SecurityConfiguration {
         /*
         Cross-Site-Request-Forgery, prevents unauthorized commands from the user.
         Basically, for each POST-Form a 2nd input (the CSRF-Token) is expected and checked.
-        You can define what to do if CSRF failed (accessDeniedHandler, by default 403),
-        where to store the token (csrfTokenRepository, by default in the session)
-        and when to use it (requireCsrfProtectionMatcher, usually POST, PUT, DELETE)
+        You can define where to store the token (csrfTokenRepository, by default in the session)
+        and when to use it (requireCsrfProtectionMatcher, usually POST, PUT, DELETE. Can be fine-tuned by
+        ignoringAntMatchers and ignoringRequestMatchers), what to do after a login
+        (sessionAuthenticationStrategy, default overwrite token, normally this should not be changed)
         or disable it (disable)
          */
         http.csrf(Customizer.withDefaults());

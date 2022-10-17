@@ -14,7 +14,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain usernameSecurityConfiguration(HttpSecurity http) throws Exception {
         http.antMatcher("/**");
         http.formLogin(Customizer.withDefaults());
-        http.authorizeRequests(c -> c.anyRequest().hasRole("ADMIN"));
+        http.authorizeHttpRequests(c -> c.anyRequest().hasRole("ADMIN"));
         return http.build();
     }
 }
